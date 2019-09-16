@@ -1,5 +1,6 @@
+/*Tomáš Varga*/
 public class English extends Subject {
-
+    
     public String translateAnimal(String animal){
        /* if(animal.toLowerCase() == "pes"){
             return "Dog";
