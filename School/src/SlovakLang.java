@@ -1,3 +1,4 @@
+/*Tomáš Varga*/
 public class SlovakLang extends Subject {
 
     public String formatText(String text){
