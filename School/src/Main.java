@@ -12,6 +12,8 @@ public class Main {
 
         System.out.println(((Math) mat).reverse(150));
 
+        System.out.println(((Math) mat).primeNumber(991));
+
 
 
     }
