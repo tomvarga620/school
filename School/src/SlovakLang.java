@@ -19,4 +19,33 @@ public class SlovakLang extends Subject {
             return first + other;
         }
     }
+
+    public char cryptLetter(char l){
+        int ascii = (int) l;
+        String binary = Integer.toBinaryString(ascii);
+        String lastD = binary.substring(binary.length() -4);
+        String firstD = binary.substring(0,binary.length()-lastD.length());
+        String rslt ="";
+        for(int i = 0;i<lastD.length();i++){
+            if(lastD.charAt(i)=='0'){
+                rslt=rslt+"1";
+            } else {
+                rslt=rslt+"0";
+            }
+        }
+        String finalString = firstD+rslt;
+        int finalNum = Integer.parseInt(finalString, 2);
+        System.out.println(finalNum);
+        char ch = (char) finalNum;
+        return ch;
+    }
+
+    public String cryptWord(String text){
+        String rsltWord = "";
+        for(int i = 0;i<text.length();i++){
+            rsltWord = rsltWord + cryptLetter(text.charAt(i));
+        }
+        System.out.println(rsltWord.length());
+        return rsltWord;
+    }
 }

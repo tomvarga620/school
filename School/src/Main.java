@@ -14,7 +14,13 @@ public class Main {
 
         System.out.println(((Math) mat).primeNumber(991));
 
+        Other other = new Other();
 
+        System.out.println(other.price("6.2 €"));
+
+        Subject letter = new SlovakLang();
+
+        System.out.println(((SlovakLang) letter).cryptWord("Pes"));
 
     }
 }
