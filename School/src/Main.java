@@ -20,7 +20,11 @@ public class Main {
 
         Subject letter = new SlovakLang();
 
-        System.out.println(((SlovakLang) letter).cryptWord("Pes"));
+       // System.out.println(((SlovakLang) letter).encryptWord("K"));
+
+        System.out.println(((SlovakLang) letter).encryptLetter2('E'));
+
+        System.out.println(((SlovakLang) letter).encryptLetter3('Z'));
 
     }
 }

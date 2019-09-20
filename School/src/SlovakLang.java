@@ -20,9 +20,10 @@ public class SlovakLang extends Subject {
         }
     }
 
-    public char cryptLetter(char l){
+    public char encryptLetter(char l){
         int ascii = (int) l;
         String binary = Integer.toBinaryString(ascii);
+        System.out.println(binary);
         String lastD = binary.substring(binary.length() -4);
         String firstD = binary.substring(0,binary.length()-lastD.length());
         String rslt ="";
@@ -40,10 +41,37 @@ public class SlovakLang extends Subject {
         return ch;
     }
 
-    public String cryptWord(String text){
+    public char encryptLetter2(char l){
+        int ascii = (int) l;
+        System.out.println(ascii);
+        int rslt = (( l & 15 ) << 4) + (( l & 240) >> 4);
+        char ch = (char) rslt;
+
+        return ch;
+    }
+
+    public char encryptLetter3(char l){
+        int ascii = (int) l;
+        System.out.println(ascii);
+        int rslt  = ( ((ascii & 0x0aaaaaaa) >> 1) | ((ascii & 0x55555550) << 1) );
+        char ch = (char) rslt;
+        System.out.println(ch);
+        return ch;
+    }
+
+    public String encryptWord(String text){
         String rsltWord = "";
         for(int i = 0;i<text.length();i++){
-            rsltWord = rsltWord + cryptLetter(text.charAt(i));
+            rsltWord = rsltWord + encryptLetter(text.charAt(i));
+        }
+        System.out.println(rsltWord.length());
+        return rsltWord;
+    }
+
+    public String encryptWord2(String text){
+        String rsltWord = "";
+        for(int i = 0;i<text.length();i++){
+            rsltWord = rsltWord + encryptLetter2(text.charAt(i));
         }
         System.out.println(rsltWord.length());
         return rsltWord;
