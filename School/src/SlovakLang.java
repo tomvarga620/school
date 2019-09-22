@@ -52,8 +52,9 @@ public class SlovakLang extends Subject {
 
     public char encryptLetter3(char l){
         int ascii = (int) l;
-        System.out.println(ascii);
-        int rslt  = ( ((ascii & 0x0aaaaaaa) >> 1) | ((ascii & 0x55555550) << 1) );
+        //System.out.println(ascii);
+        int rslt  = ((ascii & 0b10101010) >> 1) | ((ascii & 0b01010101) << 1);
+        System.out.println(rslt);
         char ch = (char) rslt;
         System.out.println(ch);
         return ch;

@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        Subject sjl = new SlovakLang();
+        /*Subject sjl = new SlovakLang();
 
         System.out.println(((SlovakLang) sjl).formatText("TOTO JE VETA"));
 
@@ -20,11 +20,16 @@ public class Main {
 
         Subject letter = new SlovakLang();
 
-       // System.out.println(((SlovakLang) letter).encryptWord("K"));
+        System.out.println(((SlovakLang) letter).encryptWord("K"));
 
         System.out.println(((SlovakLang) letter).encryptLetter2('E'));
 
-        System.out.println(((SlovakLang) letter).encryptLetter3('Z'));
+        System.out.println(((SlovakLang) letter).encryptLetter3('Z'));*/
+
+        Subject letter = new SlovakLang();
+
+        System.out.println(((SlovakLang) letter).encryptLetter3('a'));
+
 
     }
 }
